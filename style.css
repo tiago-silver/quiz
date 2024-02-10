@@ -1,0 +1,147 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+*, :root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+
+    font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    
+}
+
+#quiz{
+    counter-reset: quiz-item;
+}
+
+body{
+    background-color: #0f172a;
+}
+header{
+    margin-top: 64px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #334155;
+}
+
+header h1 {
+    margin-top: 24px;
+    font-size: 30px;
+    color: #f1f5f9;
+}
+
+main{
+    padding: 20px;
+    max-width: 648px;
+    margin:  0 auto 64px;
+    
+    
+}
+
+
+.quiz-item{
+    border: 1px solid #475569 ;
+    margin-top: 24px;
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+.quiz-item h3{
+    padding: 16px 20px;
+    color: #e2e3f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background-color: #1e293b;
+
+    
+
+}
+.quiz-item h3:before {
+    counter-increment: quiz-item;
+    content: counter(quiz-item);
+
+    background-color: #475569;
+    height: 28px;
+    width: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+
+    
+}
+
+.quiz-item dl {
+    padding: 20px 24px;
+
+    display: grid;
+    gap: 8px;
+}
+
+.quiz-item dl dt {
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 24px ;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #e2e3f0;
+}
+
+input{
+    all: unset;
+
+    border: 1px solid #94a3b8;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+input:checked {
+    
+    border: 1px solid #a3e635;
+}
+input:checked::before {
+    content: "";
+   
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #a3e635;
+}
+
+
+
+#acertos{
+    text-align: center;
+    background-color: #a3e635;
+
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    padding: 12px;
+    
+    left: 0;
+}
